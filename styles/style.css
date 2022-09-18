@@ -19,11 +19,13 @@ h1 {
 }
 
 .schedule {
-    height: 3rem;
+    height: 4rem;
     border: 1px solid #000;
 }
 .schedule h2 {
      color: #fff;
+     font-size: 18pt;
+     text-indent: 1rem;
 }
 main {
      display: flex;
@@ -39,14 +41,28 @@ main {
      width: 100%;
      margin-bottom: 0.1rem;
 }
-
+.input {
+     border: 2px solid #ccc;
+     transition: all 500ms;
+}
+.input:hover {
+    border: 2px solid #666;
+}
 .div-container .input, #button {
      width: 16rem;
      border-radius: 3px;
      font-size: 16pt;
+     padding: .4rem;
 }
 .span {
      color: red;
      position: absolute;
      right: -0.8rem;
+}
+#button {
+     transition: all 500ms;
+}
+#button:hover {
+     background-color: rgba(0, 0, 0, 0.509);
+     color: #ccc;
 }
