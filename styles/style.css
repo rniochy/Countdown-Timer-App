@@ -14,8 +14,29 @@ body {
 
 h1 {
      color: #cccccc;
+     margin-bottom: 1rem;
+}
+main {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin: 0 auto;
+     width: 50vw;
+     height: 70vh;
+}
+.div-container {
+    position: relative;
+     display: flex;
+     width: 100%;
+     margin-bottom: 0.1rem;
 }
 
+.div-container .input, #button {
+     width: 100%;
+     border-radius: 3px;
+}
 .span {
      color: red;
+     position: absolute;
+     right: -0.8rem;
 }
