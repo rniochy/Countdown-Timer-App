@@ -14,7 +14,16 @@ body {
 
 h1 {
      color: #cccccc;
-     margin-bottom: 1rem;
+     margin:2rem 0  1rem 0;
+     font-size: larger;
+}
+
+.schedule {
+    height: 3rem;
+    border: 1px solid #000;
+}
+.schedule h2 {
+     color: #fff;
 }
 main {
      display: flex;
@@ -32,8 +41,9 @@ main {
 }
 
 .div-container .input, #button {
-     width: 100%;
+     width: 16rem;
      border-radius: 3px;
+     font-size: 16pt;
 }
 .span {
      color: red;
