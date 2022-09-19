@@ -55,18 +55,18 @@ main {
      padding: .4rem;
 }
 .span {
-     color: red;
+     color: rgb(237, 67, 67);
      position: absolute;
      right: -0.8rem;
      top: .3rem;
 }
 #button {
      background-color: rgba(0, 0, 0, 0.509);
-     color: rgba(204, 204, 204, 0.58);
+     color: rgba(204, 204, 204);
      transition: all 500ms;
      font-weight: 500;
 }
 #button:hover {
-     background-color: rgba(0, 0, 0, 0.847);
+     background-color: rgba(0, 0, 0, 0.937);
      color: #ccc;
 }
