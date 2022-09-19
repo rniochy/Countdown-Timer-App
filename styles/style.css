@@ -64,8 +64,9 @@ main {
 #button {
      background-color: rgba(0, 0, 0, 0.509);
      color: rgba(204, 204, 204);
-     transition: all 500ms;
      font-weight: 500;
+     padding: .8rem;
+     transition: all 500ms;
 }
 #button:hover {
      background-color: rgba(0, 0, 0, 0.937);
