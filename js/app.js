@@ -10,9 +10,12 @@ button.addEventListener('click', function() {
         message.innerText = "The field 'name' is required."
         setTimeout(()=> message.innerText = "", 3000);
     } 
-        alert(dateInput)
-    if(new Date(`${dateInput.value}`) < new Date()){
+
+      const date = new Date(dateInput.value+""); 
+    if(date < new Date() && !dateInput.value){
         message.innerText = "The date is not corretly.."
         setTimeout(()=> message.innerText = "", 3000);
+    } else {
+         console.log(date)
     }
 })
