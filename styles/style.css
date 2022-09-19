@@ -10,17 +10,17 @@ body {
      box-sizing: border-box;
      font-size: medium;
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     user-select: none;
 }
 
 h1 {
-     color: #cccccc;
+     color: rgba(218, 57, 57, 0.692);
      margin:2rem 0  1rem 0;
      font-size: larger;
 }
 
 .schedule {
     height: 4rem;
-    border: 1px solid #000;
 }
 .schedule h2 {
      color: #fff;
@@ -50,7 +50,7 @@ main {
 }
 .div-container .input, #button {
      width: 16rem;
-     border-radius: 3px;
+     border-radius: 5px;
      font-size: 16pt;
      padding: .4rem;
 }
@@ -58,11 +58,15 @@ main {
      color: red;
      position: absolute;
      right: -0.8rem;
+     top: .3rem;
 }
 #button {
+     background-color: rgba(0, 0, 0, 0.509);
+     color: rgba(204, 204, 204, 0.58);
      transition: all 500ms;
+     font-weight: 500;
 }
 #button:hover {
-     background-color: rgba(0, 0, 0, 0.509);
+     background-color: rgba(0, 0, 0, 0.847);
      color: #ccc;
 }
