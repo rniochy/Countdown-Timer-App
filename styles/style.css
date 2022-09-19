@@ -19,6 +19,7 @@ h1 {
      font-size: larger;
 }
 
+
 .schedule {
     height: 4rem;
 }
@@ -69,4 +70,11 @@ main {
 #button:hover {
      background-color: rgba(0, 0, 0, 0.937);
      color: #ccc;
+}
+
+#alert-message {
+      color: rgb(238, 36, 36);
+      font-size: smaller;
+      margin-left: 2.7rem;
+     
 }

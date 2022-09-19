@@ -8,6 +8,7 @@ const message = document.getElementById('alert-message');
 button.addEventListener('click', function() {
     
     if(nameInput){
-        message.innerText = "The field 'name' is required.";
+        message.innerText = "The field 'name' is required."
+        setTimeout(()=> message.innerText = "", 2000);
     }
 })
