@@ -42,11 +42,11 @@ main {
      width: 100%;
      margin-bottom: 0.1rem;
 }
-.input {
+.input, #event-time, label {
      border: 2px solid #ccc;
      transition: all 500ms;
 }
-.input:hover {
+.input:hover, #event-time:hover {
     border: 2px solid #666;
 }
 .div-container .input, #button {
@@ -60,6 +60,21 @@ main {
      position: absolute;
      right: -0.8rem;
      top: .3rem;
+}
+label {
+      border-right: none;
+      color: rgb(79, 79, 79)
+}
+#time label {
+  background-color: white;
+  width: 35%;
+  border-radius: 5px 0px 0px 5px ;
+}
+#event-time {
+      width: 70%;
+      height: 2rem;
+      border-radius: 2px;
+      border-left: none;
 }
 #button {
      background-color: rgba(0, 0, 0, 0.509);
