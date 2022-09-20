@@ -18,7 +18,14 @@ button.addEventListener('click', function() {
     } else {
              const curent_date = new Date();
              let year = date.getFullYear() - curent_date.getFullYear();
-             let month =  Math.abs((date.getMonth()+1) - (curent_date.getMonth()+1)); 
+             let month = (date.getMonth()+1) - (curent_date.getMonth()+1); 
              let day = Math.abs(date.getDate() -  curent_date.getDate());  
+
+             if(month < 0) month = 12 - Math.abs(month);
+
+             let dayCounter = (year * 365) + (month * 30) + day;
+             let hours = (dayCounter * 24) - curent_date.getHours();
+
+             console.log(dayCounter, hours)
     }
 })
