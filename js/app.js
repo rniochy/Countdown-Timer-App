@@ -16,6 +16,9 @@ button.addEventListener('click', function() {
         message.innerText = "The date is not corretly.."
         setTimeout(()=> message.innerText = "", 3000);
     } else {
-         console.log(date.getMinutes(), date.getHours())
+             const curent_date = new Date();
+             let year = date.getFullYear() - curent_date.getFullYear();
+             let month =  Math.abs((date.getMonth()+1) - (curent_date.getMonth()+1)); 
+             let day = Math.abs(date.getDate() -  curent_date.getDate());  
     }
 })
