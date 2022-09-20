@@ -12,7 +12,8 @@ button.addEventListener('click', function() {
     } 
 
      const date = new Date(dateInput.value+""); 
-    if(date < new Date() && date.getDate()){
+     console.log(date.getFullYear())
+    if((date < new Date() && date.getDate()) && (date.getFullYear() > 2024)){
         message.innerText = "The date is not corretly.."
         setTimeout(()=> message.innerText = "", 3000);
     } else {
