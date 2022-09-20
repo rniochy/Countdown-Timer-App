@@ -11,11 +11,11 @@ button.addEventListener('click', function() {
         setTimeout(()=> message.innerText = "", 3000);
     } 
 
-      const date = new Date(dateInput.value+""); 
-    if(date < new Date() && !dateInput.value){
+     const date = new Date(dateInput.value+""); 
+    if(date < new Date() && date.getDate()){
         message.innerText = "The date is not corretly.."
         setTimeout(()=> message.innerText = "", 3000);
     } else {
-         console.log(date)
+         console.log(date.getMinutes(), date.getHours())
     }
 })
