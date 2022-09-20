@@ -29,6 +29,13 @@ button.addEventListener('click', function() {
 
              console.log(dayCounter, hours)
 
-             setInterval(()=>{ console.log(seconds--)}, 1000);
+             setInterval(()=>{ 
+                console.log(seconds)
+                if(seconds ===0 ){
+                    seconds = 59;
+                } else {
+                    seconds--
+                }
+                }, 1000);
     }
 })
