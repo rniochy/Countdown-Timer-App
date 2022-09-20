@@ -25,7 +25,10 @@ button.addEventListener('click', function() {
 
              let dayCounter = (year * 365) + (month * 30) + day;
              let hours = (dayCounter * 24) - curent_date.getHours();
+             let seconds = 59 - curent_date.getSeconds();
 
              console.log(dayCounter, hours)
+
+             setInterval(()=>{ console.log(seconds--)}, 1000);
     }
 })
