@@ -4,7 +4,7 @@ const timeInput = document.getElementById('time-input');
 const displaySchedule = document.getElementById('schedule');
 const button = document.getElementById('button');
 const message = document.getElementById('alert-message');
-let endToCount = true;
+let endToCount = false;
 
 
 function display(dayCounter, hours,minutes, seconds, endToCount){
@@ -41,7 +41,7 @@ function countDown(date,displaySchedule, timeInput){
         }else if((((hours*60)) - 60) === minutes && hours > 0){
              hours--;
 
-        }else if((dayCounter * 24) === hours && hours > 0)  {
+        }else if((dayCounter * 24) === hours && dayCounter > 0)  {
              dayCounter--;
 
          } else if(dayCounter === 0 && hours === 0 && minutes === 0){
