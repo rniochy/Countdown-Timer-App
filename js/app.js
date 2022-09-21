@@ -12,7 +12,7 @@ button.addEventListener('click', function() {
     } 
 
      const date = new Date(dateInput.value+""); 
-     console.log(date.getFullYear())
+
     if((date < new Date() && date.getDate()) && (date.getFullYear() > 2024)){
         message.innerText = "The date is not corretly.."
         setTimeout(()=> message.innerText = "", 3000);
@@ -20,20 +20,23 @@ button.addEventListener('click', function() {
              const curent_date = new Date();
              let year = date.getFullYear() - curent_date.getFullYear();
              let month = (date.getMonth()+1) - (curent_date.getMonth()+1); 
+             let minutesCurrent = curent_date.getMinutes();
              let day = Math.abs(date.getDate() -  curent_date.getDate());  
 
              if(month < 0) month = 12 - Math.abs(month);
 
              let dayCounter = (year * 365) + (month * 30) + day;
              let hours = (dayCounter * 24) - curent_date.getHours();
+             let minutes = hours * 60;
              let seconds = 59 - curent_date.getSeconds();
-
-             console.log(dayCounter, hours)
-
+             
+             minutes = (minutes - (24 - hours)) - minutesCurrent;
              setInterval(()=>{ 
-                console.log(seconds)
+                 
+                 console.log(minutes, hours, dayCounter, seconds, minutesCurrent);
                 if(seconds ===0 ){
                     seconds = 59;
+                    minutes--;
                 } else {
                     seconds--
                 }
