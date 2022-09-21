@@ -18,8 +18,7 @@ button.addEventListener('click', function() {
         setTimeout(()=> message.innerText = "", 3000);
     } 
 
-     const date = new Date(dateInput.value+""); 
-     console.log(date > new Date())
+    const date = new Date(dateInput.value+""); 
     if((date > new Date()) && (date.getFullYear() < 2025)){
 
         const curent_date = new Date();
