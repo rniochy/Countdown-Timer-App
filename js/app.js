@@ -1,6 +1,7 @@
 const nameInput = document.getElementById('name-input');
 const dateInput = document.getElementById('date-input');
 const timeInput = document.getElementById('time-input');
+const displaySchedule = document.getElementById('schedule');
 const button = document.getElementById('button');
 const message = document.getElementById('alert-message');
 
@@ -35,14 +36,16 @@ button.addEventListener('click', function() {
 
              setInterval(()=>{ 
                  
-                 console.log(hours, dayCounter, minutes);
+
+                displaySchedule.innerHTML = `<h2>${hours} ${dayCounter} ${minutes} ${seconds}</h2>`;
+
                 if(seconds ===0 ){
                     seconds = 59;
                     minutes--;
                 }else if(minutes === 0){
                      hours--;
                 } else if(hours === 0){
-                            dayCounter--;
+                        dayCounter--;
                 }else {
                     seconds--;
                 }
