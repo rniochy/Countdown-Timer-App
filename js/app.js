@@ -4,17 +4,17 @@ const timeInput = document.getElementById('time-input');
 const displaySchedule = document.getElementById('schedule');
 const button = document.getElementById('button');
 const message = document.getElementById('alert-message');
-let endToCount = false;
+let endToCount = true;
 
 
-function display(dayCounter, hours,minutes, seconds){
+function display(dayCounter, hours,minutes, seconds, endToCount){
     return `
     <div id="schedule" class="schedule div-container"> 
-    <h2>${dayCounter} - ${hours} - ${minutes} - ${seconds < 10 ? '0'+seconds: seconds}</h2>;
+    <h2 class=${endToCount? "endToCount": ''}>${dayCounter} - ${hours} - ${minutes} - ${seconds < 10 ? '0'+seconds: seconds}</h2>;
     </div> `
 }
 
-function countDown(date,displaySchedule){
+function countDown(date,displaySchedule, timeInput){
     const curent_date = new Date();
     let year = date.getFullYear() - curent_date.getFullYear();
     let month = (date.getMonth()+1) - (curent_date.getMonth()+1); 
@@ -32,43 +32,38 @@ function countDown(date,displaySchedule){
     dayCounter = Math.floor((minutes/24)/60);
 
     const timer = setInterval(()=>{ 
-       displaySchedule.innerHTML = display(dayCounter, hours,minutes, seconds);
-       console.log((dayCounter * 24), dayCounter)
+       displaySchedule.innerHTML = display(dayCounter, hours,minutes, seconds, endToCount);
+       
        if(seconds ===0 ){
            seconds = 59;
            minutes--;
 
         }else if((((hours*60)) - 60) === minutes && hours > 0){
-                hours--;
+             hours--;
 
         }else if((dayCounter * 24) === hours && hours > 0)  {
-                dayCounter--;
+             dayCounter--;
 
          } else if(dayCounter === 0 && hours === 0 && minutes === 0){
                 clearInterval(timer);
                 endToCount = true;
-                displaySchedule.innerHTML = display(dayCounter, hours,minutes, seconds );
+                displaySchedule.innerHTML = display(dayCounter, hours,minutes, seconds, endToCount );
          } else {
-                seconds--;
+            seconds--;
         }
     }, 1000);
 }
-
-
 
 button.addEventListener('click',async function() {
     if(!nameInput.value){
         message.innerText = "The field 'name' is required."
         setTimeout(()=> message.innerText = "", 3000);
     } 
-    
-    // const data = await fetch("../data/data.json");
-    // data.json().then(res=> console.log(res));
-
 
     const date = new Date(dateInput.value+""); 
     if((date > new Date()) && (date.getFullYear() < 2030)){
-        countDown(date,displaySchedule);
+        countDown(date,displaySchedule, timeInput);
+
     } else {
         message.innerText = "The date is not corretly.."
         setTimeout(()=> message.innerText = "", 3000);

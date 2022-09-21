@@ -29,6 +29,7 @@ h1 {
 .schedule {
     height: 2.5rem;
     position: absolute;
+    top: -0.5rem;
 }
 .schedule h2 {
      color: #fff;
@@ -101,6 +102,30 @@ label {
      
 }
 
+.endToCount {
+      border: 1px solid rgba(218, 57, 57, 0.692);
+      border-radius: 5px;
+      padding: 1rem 0 2rem 0;
+      margin-bottom: 0.5rem;
+      transition: all 400ms cubic-bezier(0.6, 0.04, 0.98, 0.335);
+      animation: animation 1s  infinite;
+}
+
+@keyframes animation {
+     0% { border: 1px solid #ff0000; }
+     8.333% {border: 1px solid #ff8000; }
+     16.667% {border: 1px solid #ffff00; }
+     25.000% {border: 1px solid #80ff00; }
+     33.333% {border: 1px solid #00ff00; }
+     41.667% {border: 1px solid #00ff80; }
+     50.000% {border: 1px solid #00ffff; }
+     58.333% {border: 1px solid #0080ff; }
+     66.667% {border: 1px solid #0000ff; }
+     75.000% {border: 1px solid #8000ff; }
+     83.333% {border: 1px solid #ff00ff; }
+     91.667% {border: 1px solid #ff0080; }
+     100.00% {border: 1px solid #ff0000; }
+}
 /* RESPONSIVITY */
 
 @media screen and (max-width: 444px) {
