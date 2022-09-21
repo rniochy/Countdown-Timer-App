@@ -61,10 +61,13 @@ button.addEventListener('click',async function() {
         message.innerText = "The field 'name' is required."
         setTimeout(()=> message.innerText = "", 3000);
     } 
+    
+    const data = await fetch("../data/data.json");
+    data.json().then(res=> console.log(res));
+
 
     const date = new Date(dateInput.value+""); 
-    if((date > new Date()) && (date.getFullYear() < 2025)){
-        await fetch('')
+    if((date > new Date()) && (date.getFullYear() < 2030)){
         countDown(date,displaySchedule, timeInput);
     } else {
         message.innerText = "The date is not corretly.."
