@@ -20,8 +20,8 @@ button.addEventListener('click', function() {
              const curent_date = new Date();
              let year = date.getFullYear() - curent_date.getFullYear();
              let month = (date.getMonth()+1) - (curent_date.getMonth()+1); 
-             let minutesCurrent = curent_date.getMinutes();
              let day = Math.abs(date.getDate() -  curent_date.getDate());  
+             let minutesCurrent = curent_date.getMinutes();
 
              if(month < 0) month = 12 - Math.abs(month);
 
@@ -31,14 +31,20 @@ button.addEventListener('click', function() {
              let seconds = 59 - curent_date.getSeconds();
              
              minutes = (minutes - (24 - hours)) - minutesCurrent;
+             dayCounter = Math.floor((minutes/24)/60);
+
              setInterval(()=>{ 
                  
-                 console.log(minutes, hours, dayCounter, seconds, minutesCurrent);
+                 console.log(hours, dayCounter, minutes);
                 if(seconds ===0 ){
                     seconds = 59;
                     minutes--;
-                } else {
-                    seconds--
+                }else if(minutes === 0){
+                     hours--;
+                } else if(hours === 0){
+                            dayCounter--;
+                }else {
+                    seconds--;
                 }
                 }, 1000);
     }
