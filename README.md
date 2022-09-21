@@ -30,8 +30,4 @@ decrement. For example, when the remaining seconds count reaches 0 the remaining
 minutes count will decrement by 1 and the seconds will start to countdown from 59. This progression must take place from seconds all the way up to the remaining days position in countdown display. 
 
 ## Bonus features
-
--   [ ] User can save the event so that it persists across sessions
 -   [ ] User can see an alert when the event is reached
--   [ ] User can specify more than one event. 
--   [ ] User can see a countdown timers for each event that has been defined.
