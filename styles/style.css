@@ -23,8 +23,7 @@ main {
 h1 {
      color: rgba(218, 57, 57, 0.692);
      margin:2rem 0  1rem 0;
-     font-size: larger;
-
+    font-size: larger;
 }
 .schedule {
     height: 2.5rem;
@@ -94,14 +93,12 @@ label {
      background-color: rgba(0, 0, 0, 0.937);
      color: #ccc;
 }
-
 #alert-message {
       color: rgb(238, 36, 36);
       font-size: smaller;
       margin-left: 2.7rem;
      
 }
-
 .endToCount {
       border: 1px solid rgba(218, 57, 57, 0.692);
       border-radius: 5px;
