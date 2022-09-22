@@ -11,7 +11,7 @@ function display(dayCounter, hours,minutes, seconds, endToCount){
     return `
     <div id="schedule" class="schedule div-container"> 
     <h2 class=${endToCount? "endToCount": ''}>${dayCounter} - ${hours} - ${minutes} - ${seconds < 10 ? '0'+seconds: seconds}</h2>;
-    </div> `
+    </div> `;
 }
 
 function countDown(date,displaySchedule, timeInput){
@@ -56,7 +56,7 @@ function countDown(date,displaySchedule, timeInput){
 
 button.addEventListener('click',async function() {
     if(!nameInput.value){
-        message.innerText = "The field 'name' is required."
+        message.innerText = "The field 'name' is required.";
         setTimeout(()=> message.innerText = "", 3000);
     } 
 
@@ -65,7 +65,7 @@ button.addEventListener('click',async function() {
         countDown(date,displaySchedule, timeInput);
 
     } else {
-        message.innerText = "The date is not corretly.."
+        message.innerText = "The date is not corretly..";
         setTimeout(()=> message.innerText = "", 3000);
     }
 })
