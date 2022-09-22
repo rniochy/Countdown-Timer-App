@@ -34,7 +34,7 @@ function countDown(date,displaySchedule, timeInput){
     const timer = setInterval(()=>{ 
        displaySchedule.innerHTML = display(dayCounter, hours,minutes, seconds, endToCount);
        
-       if(seconds ===0 ){
+       if(seconds === 0 ){
            seconds = 59;
            minutes--;
 
@@ -54,7 +54,7 @@ function countDown(date,displaySchedule, timeInput){
     }, 1000);
 }
 
-button.addEventListener('click',async function() {
+button.addEventListener('click', async function() {
     if(!nameInput.value){
         message.innerText = "The field 'name' is required.";
         setTimeout(()=> message.innerText = "", 3000);
