@@ -2,6 +2,7 @@ const displaySchedule = document.getElementById('schedule');
 const nameInput = document.getElementById('name-input');
 const dateInput = document.getElementById('date-input');
 const timeInput = document.getElementById('time-input');
+const eventName = document.getElementById('event-name');
 const button = document.getElementById('button');
 const message = document.getElementById('alert-message');
 let endToCount = false;
@@ -10,7 +11,7 @@ let endToCount = false;
 function display(dayCounter, hours,minutes, seconds, endToCount){
     return `
     <div id="schedule" class="schedule div-container"> 
-    <h2 class=${endToCount? "endToCount": ''}>${dayCounter} - ${hours} - ${minutes} - ${seconds < 10 ? '0'+seconds: seconds}</h2>;
+    <h2 class=${endToCount? "endToCount": ''}>${dayCounter < 10? '0'+dayCounter:dayCounter} - ${hours < 10 ? '0'+hours:hours} - ${minutes < 10? '0'+minutes: minutes} - ${seconds < 10 ? '0'+seconds: seconds}</h2>;
     </div> `;
 }
 
@@ -45,9 +46,11 @@ function countDown(date,displaySchedule, timeInput){
              dayCounter--;
 
          } else if(dayCounter === 0 && hours === 0 && minutes === 0){
-                clearInterval(timer);
-                endToCount = true;
-                displaySchedule.innerHTML = display(dayCounter, hours,minutes, seconds, endToCount );
+            seconds =0;
+            clearInterval(timer);
+            endToCount = true;
+            displaySchedule.innerHTML = display(dayCounter, hours,minutes, seconds, endToCount );
+            eventName.innerHTML = `<h2>${nameInput.value}</h2>`;
          } else {
             seconds--;
         }

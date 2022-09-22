@@ -36,12 +36,16 @@ h1 {
      text-align: center;
      width: 18rem;
 }
-
 .div-container {
     position: relative;
      display: flex;
      width: 100%;
      margin-bottom: 0.1rem;
+}
+#event-name {
+      text-align: center;
+      margin: 0.5rem 0 0.5rem 0;
+      color: #80ff00; 
 }
 .input, #event-time, label {
      border: 2px solid #ccc;
