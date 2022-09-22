@@ -131,7 +131,7 @@ label {
      }
      #time label {
           width: 40.5%;
-        }
+     }
      h1 {
           font-size: medium;
      }
@@ -140,5 +140,5 @@ label {
 @media screen and (max-width: 667px) {
      .schedule h2 {
           font-size: medium;
-      }
+     }
 }
